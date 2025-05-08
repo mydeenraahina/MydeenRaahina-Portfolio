@@ -35,7 +35,7 @@ st.markdown(
     }
 
     .normalText {
-        font-size: 18px;  /* Reduced paragraph font size */
+        font-size: 16px;  /* Reduced paragraph font size */
         color: #444;
         margin-top: 30px;
         line-height: 1.6;
