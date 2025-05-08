@@ -99,3 +99,19 @@ with st.expander("Know More About Me", expanded=False):
         """,
         unsafe_allow_html=True
     )
+
+# Button-like expander for markdown content
+with st.expander("Markdown", expanded=False):
+    st.markdown(
+        """
+        <div class="normalText">
+            Here you can add your markdown content or anything you'd like to display using markdown! You can use **bold**, *italic*, and even [links](https://example.com).
+            <br><br>
+            ## Example Markdown Header
+            - List item 1
+            - List item 2
+            - List item 3
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
