@@ -24,18 +24,18 @@ st.markdown(
         display: inline-block;
         overflow: hidden;
         white-space: nowrap;
-        border-right: 3px solid #333;
+        border-right: 2px solid #333;
         width: 0;
         animation: typing 3s steps(30) 1s 1 normal both;
-        font-size: 26px;  /* Reduced font size */
-        font-family: 'Poppins', sans-serif;  /* More attractive font */
+        font-size: 20px;  /* Further reduced font size */
+        font-family: 'Poppins', sans-serif;  /* Stylish font */
         font-weight: 600;
         color: #2c3e50;
         margin-top: 30px;
     }
 
     .normalText {
-        font-size: 16px;  /* Reduced paragraph font size */
+        font-size: 18px;
         color: #444;
         margin-top: 30px;
         line-height: 1.6;
@@ -47,7 +47,7 @@ st.markdown(
 )
 
 # Typing effect for name
-st.markdown('<div class="typingEffect">Hi! I\'m MydeenRaahina 👋</div>', unsafe_allow_html=True)
+st.markdown('<div class="typingEffect">Hi! I\'m Mydeen Raahina 👋</div>', unsafe_allow_html=True)
 
 # Delay to allow the typing animation to complete
 time.sleep(4)
