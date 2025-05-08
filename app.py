@@ -47,7 +47,7 @@ st.markdown(
 )
 
 # Typing effect for name
-st.markdown('<div class="typingEffect">Hi! I\'m Mydeen Raahina 👋</div>', unsafe_allow_html=True)
+st.markdown('<div class="typingEffect">Hi! I\'m MydeenRaahina 👋</div>', unsafe_allow_html=True)
 
 # Delay to allow the typing animation to complete
 time.sleep(4)
