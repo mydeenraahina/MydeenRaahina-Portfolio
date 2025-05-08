@@ -1,20 +1,61 @@
 import streamlit as st
+import time
 
-st.set_page_config(layout="wide")
+# Set page config
+st.set_page_config(page_title="About Me", layout="wide")
 
-# Only one expander should be expanded at a time.
-# You can manually set which section to expand by changing the value of `default_expand`.
+# Add custom styles
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f7f7f7;
+        font-family: 'Arial', sans-serif;
+    }
 
-default_expand = "home"  # Options: "home", "experience", "skills", "contact"
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
 
-with st.expander("🏠 Home", expanded=(default_expand == "home")):
-    st.write("Hi! I'm Mydeen Raahina, an aspiring data analyst...")
+    .typingEffect {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #333;
+        width: 0;
+        animation: typing 3s steps(30) 1s 1 normal both;
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 30px;
+    }
 
-with st.expander("💼 Experience", expanded=(default_expand == "experience")):
-    st.write("Worked as a Data Analyst Intern...")
+    .normalText {
+        font-size: 22px;
+        color: #444;
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-with st.expander("🧠 Skills", expanded=(default_expand == "skills")):
-    st.write("Skills: Python, SQL, Streamlit...")
+# Typing effect for name
+st.markdown('<div class="typingEffect">Hi! I\'m Mydeen Raahina 👋</div>', unsafe_allow_html=True)
 
-with st.expander("📨 Contact", expanded=(default_expand == "contact")):
-    st.write("You can reach me at mydeen@example.com")
+# Delay to allow the typing animation to complete
+time.sleep(4)
+
+# Enthusiastic two-line intro with qualifications
+st.markdown(
+    """
+    <div class="normalText">
+        A passionate tech enthusiast crafting smart solutions with AI/ML 🤖, Prompt Engineering ✍️, and Data Engineering 🛠️.<br>
+        Skilled in Python Backend & Full Stack Development 💻, and Data Analytics 📊 — turning ideas into impact! 🚀
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
