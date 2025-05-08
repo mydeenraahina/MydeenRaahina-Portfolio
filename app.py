@@ -27,8 +27,8 @@ st.markdown(
         border-right: 2px solid #333;
         width: 0;
         animation: typing 3s steps(30) 1s 1 normal both;
-        font-size: 20px;  /* Further reduced font size */
-        font-family: 'Poppins', sans-serif;  /* Stylish font */
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         color: #2c3e50;
         margin-top: 30px;
@@ -41,6 +41,30 @@ st.markdown(
         line-height: 1.6;
         font-family: 'Arial', sans-serif;
     }
+
+    /* Styling for the compact expander with hover effect */
+    .stExpander {
+        background-color: #2c3e50;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 0.5em 1em;  /* Reduced padding for compact size */
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+    }
+
+    /* Hover effect */
+    .stExpander:hover {
+        background-color: #34495e;  /* Darker shade on hover */
+    }
+
+    .stExpander div {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -52,7 +76,7 @@ st.markdown('<div class="typingEffect">Hi! I\'m Mydeen Raahina 👋</div>', unsa
 # Delay to allow the typing animation to complete
 time.sleep(4)
 
-# Enthusiastic two-line intro with reduced font size
+# Two-line intro
 st.markdown(
     """
     <div class="normalText">
@@ -62,3 +86,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# Button-like expander for more information
+with st.expander("Know More About Me", expanded=False):
+    st.markdown(
+        """
+        <div class="normalText">
+            🌟 I'm currently pursuing Computer Science, exploring Data Science and AI.<br>
+            🧠 Love building AI-powered apps and solving real-world problems with tech.<br>
+            📫 You can connect with me on <a href='https://www.linkedin.com' target='_blank'>LinkedIn</a> or check out my projects on <a href='https://github.com' target='_blank'>GitHub</a>!
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
